@@ -61,9 +61,9 @@
 
     <h1>Click the button to toggle move car</h1>
 
-<button class="ignition">Start Animation</button>
+<button class="ignition">Accelerator</button>
 
-<img src="img/car.jpg" style=" position:absolute;"/>
+<img src="img/car.gif" style=" position:absolute;right=0;" />
 <br>
 <br>
 <br>
@@ -109,7 +109,8 @@ $(document).ready(function(){
 $(document).ready(function(){
     $(".ignition").click(function(){
         $("img").animate({
-            right: '0px',
+            right: "-1500px",
+            transition: '3s',
         });
     });
 });
