@@ -10,22 +10,92 @@
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
+
+    <style>
+        .circle {
+            background-color: blue;
+            height:200px;
+            width:200px;
+            border-radius:100px;
+        }
+        .circle2 {
+            background-color: green;
+            height:160px;
+            width:160px;
+            border-radius:100px;
+        }
+        .circle3 {
+            background-color: yellow;
+            height:120px;
+            width:120px;
+            border-radius:100px;
+        }
+        .circle4 {
+            background-color: purple;
+            width:80px;
+            border-radius:100px;
+        }
+        .circle5 {
+            background-color: orange;
+            height:40px;
+            width:40px;
+            border-radius:100px;
+        }
+    
+    </style>
 </head>
-<body>
+</head>
+<body> 
+     <h1>hover over text to see effect</h1>
+
     <p class="para">I am litha</p>
 
-    <!-- new toggle -->
+    <hr>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
-    <p>Click the button multiple times to toggle the animation.</p>
+    <!-- new toggle for paragraphs hover background changes colour -->
 
-<button>Start Animation</button>
+    <h1>Click the button to toggle move car</h1>
 
-<p>By default, all HTML elements have a static position, and cannot be moved. To manipulate the position, remember to first set the CSS position property of the element to relative, fixed, or absolute!</p>
+<button class="ignition">Start Animation</button>
 
-<div > <img src="img/car.jpg" style=" position:absolute;"/></div>
+<img src="img/car.jpg" style=" position:absolute;"/>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<hr>
+
+
+<!-- Circle hover to dissapear -->
+
+<button class="fadeout" >Circle Fade Out</button>
+<br>
+<br>
+<br>
+<br>
+
+<div class="circle" ></div>
+<div class="circle2" ></div>
+<div class="circle3" ></div>
+<div class="circle4" ></div>
+<div class="circle5" ></div>
 
 
     <script>
+
+//  TEXT HOVER TO FONT-SIZE INCREASE AND BACKGROUND-COLOR CHANGE
+
 $(document).ready(function(){
     $("p").hover(function(){
         $(this).css("font-size", "50px");
@@ -34,12 +104,20 @@ $(document).ready(function(){
     });
 });
 
+//  CAR MOVING ANIMATION
+
 $(document).ready(function(){
-    $("button").click(function(){
+    $(".ignition").click(function(){
         $("img").animate({
             right: '0px',
         });
     });
+});
+
+ // CIRCLES FADE OUT
+
+$( ".fadeout" ).click(function() {
+  $( "div" ).fadeOut( "slow" );
 });
     </script>
 </body>
