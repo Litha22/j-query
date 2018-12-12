@@ -1,0 +1,26 @@
+
+/* There is mainly 2 different ways, using either animation or transition. */
+
+/* animation is normally better when one want something running all the time, and transition is more efficient for e.g. hover effects. */
+
+/* Here is a start using animation. */
+
+/* Stack snippet */
+
+html, body {
+  height: 100%;
+  margin: 0
+}
+
+@keyframes breath {
+  0%   { background-size: 100% auto; }
+  50% { background-size: 140% auto; }
+  100% { background-size: 100% auto; }
+}
+
+#bkg{
+  width: 100%;
+  height: 100%;
+  animation: breath 4s linear infinite;
+  background: url("http://wallpapercave.com/wp/LXR5gFx.png") center center no-repeat;
+}
